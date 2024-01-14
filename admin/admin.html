@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="pl">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,17 +8,18 @@
         <meta name="author" content="">
 
         <title>UrbanWebAdmin</title>
-        <link rel="icon" type="image/x-icon" href="./images/favicon.png">
+        <link rel="icon" type="image/x-icon" href="../images/favicon.png">
 
-        <!-- CSS FILES -->        
+        <!-- CSS FILES --> 
+        <link href="../css/checkbox-modal.css" rel="stylesheet">       
                      
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
 
-        <link href="css/bootstrap-icons.css" rel="stylesheet">
+        <link href="../css/bootstrap-icons.css" rel="stylesheet">
 
-        <link href="css/templatemo-topic-listing.css" rel="stylesheet">      
+        <link href="../css/templatemo-topic-listing.css" rel="stylesheet">      
 
-        <link href="css/admin-edit.css" rel="stylesheet">      
+        <link href="../css/admin-edit.css" rel="stylesheet">      
     </head>
     
     <body id="top">
@@ -110,13 +111,21 @@
                                         <p class="mb-0">Solid, functional, SEO-friendly and good looking frontend. Let us charm you!</p>
                                     </div>
                                     
-                                    <img src="images/topics/media-player-f272f4c4dd7945b39a2e29bd95f42f0b.png" class="custom-block-image frontend-image img-fluid" alt="">
+                                    <img src="../images/topics/media-player-f272f4c4dd7945b39a2e29bd95f42f0b.png" class="custom-block-image frontend-image img-fluid" alt="">
                                     
                                     <div class="container-observer d-flex justify-content-between align-items-center">
-                                       
-                                        <input name="brand-name" type="text" class="form-control" id="brand-name" placeholder="Your brand name" title="Start typing" required>
-                                        <input name="site-category" type="text" class="form-control" id="site-category" placeholder="Choose category of your page" title="Start typing" required>
-                                        <input name="site-category" type="email" class="form-control" id="site-email" placeholder="Email" required>
+                                        <div class="form-floating">
+                                            <input name="brand-name" type="text" class="form-control" id="brand-name" placeholder="Your brand name" required>
+                                            <label for="brand-name">Your brand name</label>
+                                        </div>
+                                        <div class="form-floating">
+                                            <input name="site-category" type="text" class="form-control" id="site-category" placeholder="Category of your page" required>
+                                            <label for="site-category">Category of your page</label>
+                                        </div>
+                                        <div class="form-floating">
+                                            <input name="site-category" type="email" class="form-control" id="site-email" placeholder="Email" required>
+                                            <label for="site-email">Email</label>
+                                        </div>
                                         <a id="go-to-details" class="badge bg-design rounded-pill ms-auto">→</a href="#page-details">
 
                                     </div>
@@ -125,7 +134,7 @@
                         <div  id="webpage-details" class="custom-container col-lg-4 col-12">
                             <div class="custom-block custom-block-overlay">
                                 <div class="d-flex flex-column h-100">
-                                    <img src="images/istockphoto-1284972775-640x640.jpg" class="custom-block-image img-fluid" alt="">
+                                    <img src="../images/istockphoto-1284972775-640x640.jpg" class="custom-block-image img-fluid" alt="">
 
                                     <div class="custom-block-overlay-text d-flex">
                                         <div>
@@ -145,7 +154,7 @@
                                     </div>
                                     <div class="social-share d-flex">
                 
-                                        <button href="topics-detail.html" class="btn custom-btn mt-2 mt-lg-3">Get Urban<i class="bi bi-globe text-white"></i>Web Voucher</button>
+                                        <button id="triggerChecksModal" data-bs-toggle="modal" data-bs-target="#checksModal" class="btn custom-btn mt-2 mt-lg-3">Get Urban<i class="bi bi-globe text-white"></i>Web Voucher</button>
 
                                     </div>
 
@@ -274,7 +283,7 @@
                                                         <span class="bi bi-piggy-bank badge bg-music rounded-pill ms-auto"></span>
                                                     </div>
 
-                                                    <img src="images/topics/undraw_personal_finance_tqcd-1.png" class="custom-block-image img-fluid" alt="">
+                                                    <img src="../images/topics/undraw_personal_finance_tqcd-1.png" class="custom-block-image img-fluid" alt="">
                                                 </a>
                                             </div>
                                         </div>
@@ -292,7 +301,7 @@
                                                         <span class="bi bi-alarm badge bg-music rounded-pill ms-auto"></span>
                                                     </div>
 
-                                                    <img src="images/topics/undraw_season_change_f99v.svg" class="custom-block-image img-fluid" alt="">
+                                                    <img src="../images/topics/undraw_season_change_f99v.svg" class="custom-block-image img-fluid" alt="">
                                                 </a>
                                             </div>
                                         </div>
@@ -310,7 +319,7 @@
                                                         <span class="bi bi-person-check-fill badge bg-music rounded-pill ms-auto"></span>
                                                     </div>
 
-                                                    <img src="images/topics/output-onlinepngtools.png" class="custom-block-image img-fluid" alt="">
+                                                    <img src="../images/topics/output-onlinepngtools.png" class="custom-block-image img-fluid" alt="">
                                                 </a>
                                             </div>
                                         </div>
@@ -332,7 +341,7 @@
                                                         <span class="bi bi-stars badge bg-design rounded-pill ms-auto"></span>
                                                     </div>
 
-                                                    <img src="images/topics/undraw_Remote_design_team_re_urdx.png" class="custom-block-image img-fluid" alt="">
+                                                    <img src="../images/topics/undraw_Remote_design_team_re_urdx.png" class="custom-block-image img-fluid" alt="">
                                                 </a>
                                             </div>
                                         </div>
@@ -350,7 +359,7 @@
                                                         <span class="bi bi-stars badge bg-design rounded-pill ms-auto"></span>
                                                     </div>
 
-                                                    <img src="images/topics/undraw_Redesign_feedback_re_jvm0.png" class="custom-block-image img-fluid" alt="">
+                                                    <img src="../images/topics/undraw_Redesign_feedback_re_jvm0.png" class="custom-block-image img-fluid" alt="">
                                                 </a>
                                             </div>
                                         </div>
@@ -368,7 +377,7 @@
                                                         <span class="bi bi-stars badge bg-design rounded-pill ms-auto"></span>
                                                     </div>
 
-                                                    <img src="images/topics/colleagues-working-cozy-office-medium-shot.png" class="custom-block-image img-fluid" alt="">
+                                                    <img src="../images/topics/colleagues-working-cozy-office-medium-shot.png" class="custom-block-image img-fluid" alt="">
                                                 </a>
                                             </div>
                                         </div>
@@ -390,7 +399,7 @@
                                                             <span class="bi bi-pc-display badge bg-advertising rounded-pill ms-auto"></span>
                                                         </div>
 
-                                                        <img src="images/topics/undraw_online_ad_re_ol62.png" class="custom-block-image img-fluid" alt="">
+                                                        <img src="../images/topics/undraw_online_ad_re_ol62.png" class="custom-block-image img-fluid" alt="">
                                                     </a>
                                                 </div>
                                             </div>
@@ -408,7 +417,7 @@
                                                             <span class="bi bi-pc-display badge bg-advertising rounded-pill ms-auto"></span>
                                                         </div>
 
-                                                        <img src="images/topics/undraw_Group_video_re_btu7.png" class="custom-block-image img-fluid" alt="">
+                                                        <img src="../images/topics/undraw_Group_video_re_btu7.png" class="custom-block-image img-fluid" alt="">
                                                     </a>
                                                 </div>
                                             </div>
@@ -426,7 +435,7 @@
                                                             <span class="bi bi-pc-display badge bg-advertising rounded-pill ms-auto"></span>
                                                         </div>
 
-                                                        <img src="images/topics/undraw_finance_re_gnv2-1.svg" class="custom-block-image img-fluid" alt="">
+                                                        <img src="../images/topics/undraw_finance_re_gnv2-1.svg" class="custom-block-image img-fluid" alt="">
                                                     </a>
                                                 </div>
                                             </div>
@@ -447,7 +456,7 @@
                                                         <span class="bi bi-toggles badge bg-control rounded-pill ms-auto"></span>
                                                     </div>
 
-                                                    <img src="images/topics/Custom Supplemental Learning-03.svg" class="custom-block-image img-fluid" alt="">
+                                                    <img src="../images/topics/Custom Supplemental Learning-03.svg" class="custom-block-image img-fluid" alt="">
                                                 </a>
                                             </div>
                                         </div>
@@ -455,7 +464,7 @@
                                         <div class="col-lg-6 col-md-6 col-12">
                                             <div class="custom-block custom-block-overlay">
                                                 <div class="d-flex flex-column h-100">
-                                                    <img src="images/businesswoman-using-tablet-analysis.jpg" class="custom-block-image img-fluid" alt="">
+                                                    <img src="../images/businesswoman-using-tablet-analysis.jpg" class="custom-block-image img-fluid" alt="">
 
                                                     <div class="custom-block-overlay-text d-flex">
                                                         <div>
@@ -493,7 +502,7 @@
                         <div class="clearfix"></div>
 
                         <div class="col-lg-5 col-12">
-                            <img src="images/how-1.png" class="img-fluid" alt="FAQs">
+                            <img src="../images/how-1.png" class="img-fluid" alt="FAQs">
                         </div>
 
                         <div class="col-lg-6 col-12 m-auto">
@@ -571,7 +580,7 @@
                         </div>
 
                         <div class="col-lg-6 col-12">
-                            <form action="#" method="post" class="custom-form contact-form" role="form">
+                            <form id="contact-form" class="custom-form contact-form" role="form">
                                 <div class="row">
                                     <div class="col-lg-6 col-md-6 col-12">
                                         <div class="form-floating">
@@ -591,15 +600,15 @@
 
                                     <div class="col-lg-12 col-12">
                                         <div class="form-floating">
-                                            <input type="text" name="subject" id="name" class="form-control" placeholder="Name" required="">
+                                            <input type="text" name="subject" id="subject" class="form-control" placeholder="Name" required="">
                                             
                                             <label for="floatingInput">Subject</label>
                                         </div>
 
                                         <div class="form-floating">
-                                            <textarea class="form-control" id="message" name="message" placeholder="Tell me about the project"></textarea>
+                                            <textarea class="form-control" id="message" name="message" placeholder="Write your message"></textarea>
                                             
-                                            <label for="floatingTextarea">Tell me about the project</label>
+                                            <label for="floatingTextarea">Write your message</label>
                                         </div>
                                     </div>
 
@@ -664,7 +673,7 @@
             </section>
         </main>
 
-<footer class="site-footer section-padding">
+    <footer class="site-footer section-padding">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-3 col-12 mb-4 pb-2">
@@ -719,41 +728,36 @@
                             English</button>
 
                             <ul class="dropdown-menu">
-                                <li><button class="dropdown-item" type="button">Polish</button></li>
+                                <li><button class="dropdown-item language-button" data-lang="PL" type="button">Polish</button></li>
 
-                                <li><button class="dropdown-item" type="button">German</button></li>
+                                <li><button class="dropdown-item language-button" data-lang="DE" type="button">German</button></li>
                             </ul>
                         </div>
 
                         <p class="copyright-text mt-lg-5 mt-4">Copyright © 2048 Topic Listing Center. All rights reserved.
-                        <br><br>Design: <a rel="nofollow" href="#" target="_blank">#</a></p>
+                        <br><br>Admin: <a rel="nofollow" href="/urban-web/admin">login</a></p>
                         
                     </div>
 
                 </div>
             </div>
-        </footer>
-        <div class="admin-button">
-            <span> 10 </span>
-            <p>You are in edit mode !!!</p>
-            <button>Save</button>
-        </div>
+    </footer>
 
-       <!-- Button trigger modal -->
-    <button id="triggerConfirmationModal" type="button" style="display: none;" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#confirmationModal">
+      <!-- Button trigger email confirmation modal -->
+      <button id="triggerConfirmationModal" type="button" style="display: none;" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#confirmationModal">
         Launch confirmation modal
     </button>
     
     <!-- Modal -->
     <div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
             <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-            Check your email (email)
+                Check your email (email)
             </div>
             <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -761,16 +765,171 @@
         </div>
         </div>
     </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="checksModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <form>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <p class="card-description">Only few final checks!</p>
+                    </div>
+                    <div class="row d-flex justify-content-center mt-100">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <h4 class="card-title">Name few sections of your website</h4>
+                                
+                                    <label class="check">
+                                        <input name="about" type="checkbox">
+                                        <span>About Us</span>
+                                    </label>
+                    
+                                    <label class="check">
+                                        <input name="services" type="checkbox">
+                                        <span>Services</span>
+                                    </label>
+                    
+                                    <label class="check">
+                                        <input name="products" type="checkbox">
+                                        <span>Products</span>
+                                    </label>
+                    
+                                    <label class="check">
+                                        <input name="team" type="checkbox">
+                                        <span>Our Team</span>
+                                    </label>
+                    
+                                    <label class="check">
+                                        <input name="testimonials" type="checkbox">
+                                        <span>Testimonials</span>
+                                    </label>
+
+                                    <label class="check">
+                                        <input name="projects" type="checkbox">
+                                        <span>Projects</span>
+                                    </label>
+                                    
+                                    <label class="check">
+                                        <input name="partners" type="checkbox">
+                                        <span>Partners</span>
+                                    </label>
+
+                                    <label class="check">
+                                        <input name="gallery" type="checkbox">
+                                        <span>Gallery</span>
+                                    </label>
+                                    <label class="check">
+                                        <input name="news" type="checkbox">
+                                        <span>News</span>
+                                    </label>
+                                    <label class="check">
+                                        <input name="events" type="checkbox">
+                                        <span>Events</span>
+                                    </label>
+                                    <label class="check">
+                                        <input name="faq" type="checkbox">
+                                        <span>FAQ</span>
+                                    </label>
+                                    <label class="check">
+                                        <input name="faq" type="checkbox">
+                                        <span>Schedule</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row d-flex justify-content-center mt-100">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <hr class="mb-30">
+                                    <label class="card-title">Choose preferred color palette</label>
+                                    <select id="select-palette" name="palette">
+                                        <option value="classy">Classy and Traditional</option>
+                                        <option value="eclectic">Eclectic  and Peaceful</option>
+                                        <option value="flat">Flat Design Colors</option>
+                                        <option value="modern">Modern and Minimalist</option>
+                                        <option value="rich">Rich and Colorful</option>
+                                        <option value="clean">Clean and Modern</option>
+                                        <option value="vibrant">Vibrant and Elegant</option>
+                                        <option value="youthful">Youthful and Fun</option>
+                                        <option value="pinkPastels">Bright Pink and Pastels</option>
+                                        <option value="cheerful">Cheerful and Energetic</option>
+                                      </select>
+                    
+                                    <input type="color" name="color1" value="#f78888" />
+                                    <input type="color" name="color2" value="#f3d350" />
+                                    <input type="color" name="color3" value="#ececec" />
+                                    <input type="color" name="color4" value="#90ccf4" />
+                                    <input type="color" name="color5" value="#5da2d5" />
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row d-flex justify-content-center mt-100">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <hr class="mb-30">
+                                    <h4 class="card-title">Responsive for </h4>
+                    
+                                    <label class="check">
+                                        <input name="" type="checkbox">
+                                        <span>Desktop</span>
+                                    </label>
+                                    <label class="check">
+                                        <input name="" type="checkbox">
+                                        <span>Tablet</span>
+                                    </label>
+                    
+                                    <label class="check">
+                                        <input name="" type="checkbox">
+                                        <span>Mobile</span>
+                                    </label>
+                    
+                                    <label class="check">
+                                        <input name="" type="checkbox">
+                                        <span>Not sure</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="customer-description-box" class="form-floating">
+                            <textarea name="" id="customer-description"  class="form-control" placeholder="Add your description"></textarea>
+                            <label for="customer-description">Here you can add your description of your website.</label>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="modal-footer">
+                        <button id="add-description-btn" type="button" class="btn btn-info">Add description</button>
+                        <button id="add-files-btn" type="button" class="btn btn-info" title="Add logo, graphics etc. ">Add file</button>
+                        <button type="submit" class="btn btn-primary">Get voucher!</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        
+    </div>
+
+    <div class="admin-button">
+        <span> 10 </span>
+        <p>You are in edit mode !!!</p>
+        <button>Save</button>
+    </div>
   
 
         <!-- JAVASCRIPT FILES -->
-        <script src="js/jquery.min.js"></script>
-        <script src="js/bootstrap.bundle.min.js"></script>
-        <script src="js/jquery.sticky.js"></script>
-        <script src="js/click-scroll.js"></script>
-        <script src="js/custom.js"></script>
-        <script src="js/sizeChange.js"></script>
-        <script src="js/languageChoice.js"></script>
-        <script src="js/CMSviaTextNodes.js"></script>
+        <script src="../js/jquery.min.js"></script>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script src="../js/jquery.sticky.js"></script>
+        <script src="../js/click-scroll.js"></script>
+        <script src="../js/custom.js"></script>
+        <script src="../js/sizeChange.js"></script>
+        <script src="../js/languageChoice.js"></script>
+        <script src="../js/checksModal.js"></script>
+        <script src="../js/CMSviaTextNodes.js"></script>
     </body>
 </html>
