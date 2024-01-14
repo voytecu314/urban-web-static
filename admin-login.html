@@ -70,7 +70,8 @@
                 const fetchResponse = await fetch(
                     'https://urban-web.cyclic.app/urban-web/admin/login', 
                     {
-                        method: 'POST', 
+                        method: 'POST',
+                        credentials: "include", 
                         headers: {'Content-Type':'application/json'},
                         body: JSON.stringify({pass: e.target.querySelector('input').value})
                     });
