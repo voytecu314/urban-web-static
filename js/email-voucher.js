@@ -2,17 +2,23 @@ const preVoucherForm = document.forms.pre_voucher_form;
 const voucherForm = document.forms.voucher_form;
 
 const sendPreVoucherData = (e) => {
+    e.preventDefault();
 
     const checksModalBtn = document.getElementById('triggerChecksModal');
     checksModalBtn.setAttribute('data-bs-toggle','modal');
     checksModalBtn.setAttribute('data-bs-target','#checksModal');
     checksModalBtn.click();
 
-    e.preventDefault();
+    const preVoucherData = {
+        brandName: preVoucherForm['brand-name'],
+        siteCategory: preVoucherForm['site-category'],
+        userEmail: preVoucherForm['user-email']
+    };
+
     const fetchOpt = {
         method: 'POST', 
         headers: {'Content-Type':'application/json'},
-        body: JSON.stringify(e.target)
+        body: JSON.stringify(preVoucherData)
     }
 
     fetch('https://urban-web.cyclic.app/urban-web/email/pre-voucher', fetchOpt)
