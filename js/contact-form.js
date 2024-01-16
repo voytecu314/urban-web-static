@@ -14,5 +14,5 @@ contactForm.addEventListener('submit',(e)=>{
         headers: {'Content-Type':'application/json'},
         body: JSON.stringify(formBody)
     };
-    fetch('https://urban-web.cyclic.app/urban-web//contact',fetchOpt).then(res=>res.json()).then(console.log).catch(console.log);
+    fetch('https://urban-web.cyclic.app/urban-web/email/contact',fetchOpt).then(res=>res.json()).then(console.log).catch(console.log);
 });
