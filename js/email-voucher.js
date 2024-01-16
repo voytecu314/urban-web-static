@@ -1,5 +1,5 @@
-const preVoucherForm = document.getElementById('pre_voucher_form');
-const voucherForm = document.getElementById('voucher_form');
+const preVoucherForm = document.forms.pre_voucher_form;
+const voucherForm = document.forms.voucher_form;
 
 const sendPreVoucherData = (e) => {
 
