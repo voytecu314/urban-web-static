@@ -1,15 +1,16 @@
 const preVoucherForm = document.forms.pre_voucher_form;
 const voucherForm = document.forms.voucher_form;
+const checksModalBtn = document.getElementById('triggerChecksModal');
+let preVoucherData = {};
 
 const sendPreVoucherData = (e) => {
     e.preventDefault();
 
-    const checksModalBtn = document.getElementById('triggerChecksModal');
     checksModalBtn.setAttribute('data-bs-toggle','modal');
     checksModalBtn.setAttribute('data-bs-target','#checksModal');
     checksModalBtn.click();
 
-    const preVoucherData = {
+    preVoucherData = {
         brandName: preVoucherForm['brand-name'].value,
         siteCategory: preVoucherForm['site-category'].value,
         userEmail: preVoucherForm['user-email'].value
@@ -29,7 +30,6 @@ const sendPreVoucherData = (e) => {
 
 const sendVoucherData = (e) => {
 
-    const checksModalBtn = document.getElementById('triggerChecksModal');
     checksModalBtn.removeAttribute('data-bs-toggle');
     checksModalBtn.removeAttribute('data-bs-target');
     
