@@ -10,9 +10,9 @@ const sendPreVoucherData = (e) => {
     checksModalBtn.click();
 
     const preVoucherData = {
-        brandName: preVoucherForm['brand-name'],
-        siteCategory: preVoucherForm['site-category'],
-        userEmail: preVoucherForm['user-email']
+        brandName: preVoucherForm['brand-name'].value,
+        siteCategory: preVoucherForm['site-category'].value,
+        userEmail: preVoucherForm['user-email'].value
     };
 
     const fetchOpt = {
