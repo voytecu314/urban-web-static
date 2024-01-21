@@ -13,7 +13,7 @@
                     const uuid = crypto.randomUUID().slice(0,3);
                     const fileInput = 
                         `<div class="d-flex">
-                            <input type="file" name="customer-file-${uuid}" id="customer-file-${uuid}" data-uuid="${uuid}" class="form-control" accept="audio/*,video/*,image/*">
+                            <input type="file" name="customer-file" id="customer-file-${uuid}" class="form-control" accept="audio/*,video/*,image/*">
                             <button type="button" class="btn btn-secondary" onclick="this.parentElement.remove()"><i class="bi bi-trash"></i></button>
                         </div>`;
                     customerDescriptionBox.insertAdjacentHTML('afterend', fileInput);
