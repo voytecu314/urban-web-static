@@ -30,18 +30,20 @@ const sendPreVoucherData = (e) => {
 
 const sendVoucherData = (e) => {
     
-    const formData = new FormData(voucherForm);
-    for (const pair of formData.entries()) {
-        console.log(pair);
-      }
     checksModalBtn.removeAttribute('data-bs-toggle');
     checksModalBtn.removeAttribute('data-bs-target');
     
+    const voucherFormData = new FormData(voucherForm);
+
+    for (const field in preVoucherData) {
+        voucherFormData.append(field,preVoucherData[field]);
+    }
+
     e.preventDefault();
     const fetchOpt = {
         method: 'POST', 
         headers: {'Content-Type':'application/json'},
-        body: JSON.stringify(e.target)
+        body: JSON.stringify(voucherFormData)
     }
 
     fetch('https://urban-web.cyclic.app/urban-web/email/voucher', fetchOpt)
