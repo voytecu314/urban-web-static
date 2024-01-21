@@ -29,7 +29,11 @@ const sendPreVoucherData = (e) => {
 }
 
 const sendVoucherData = (e) => {
-    console.log("this is gh multer branch");
+    
+    const formData = new FormData(voucherForm);
+    for (const pair of formData.entries()) {
+        console.log(pair);
+      }
     checksModalBtn.removeAttribute('data-bs-toggle');
     checksModalBtn.removeAttribute('data-bs-target');
     
