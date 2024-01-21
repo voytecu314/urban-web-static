@@ -43,7 +43,7 @@ const sendVoucherData = (e) => {
     const fetchOpt = {
         method: 'POST', 
         headers: {'Content-Type':'application/json'},
-        body: JSON.stringify(voucherFormData)
+        body: voucherFormData
     }
 
     fetch('https://urban-web.cyclic.app/urban-web/email/voucher', fetchOpt)
