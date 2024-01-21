@@ -42,7 +42,6 @@ const sendVoucherData = (e) => {
     e.preventDefault();
     const fetchOpt = {
         method: 'POST', 
-        headers: {'Content-Type':'application/json'},
         body: voucherFormData
     }
 
