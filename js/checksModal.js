@@ -1,4 +1,3 @@
-
             document.getElementById('add-description-btn').addEventListener('click', (e) => {
                     const customerDescriptionBox = document.getElementById('customer-description-box');
                     const toggleShowHide = customerDescriptionBox.style.display === 'block' ? 'none': 'block';
@@ -39,5 +38,3 @@
                     return input.nextElementSibling;
                 },select.nextElementSibling);
             });
-
-
