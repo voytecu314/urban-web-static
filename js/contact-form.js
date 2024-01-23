@@ -19,11 +19,9 @@ contactForm.addEventListener('submit',(e)=>{
         .then(res=>res.json())
 
         .then(ans=>{
-            console.log("TEST",ans);
+            console.log(ans);
             const lng = displayLanguage === 'preferred' ? navigator.language.toUpperCase() : displayLanguage.toUpperCase();
-            console.log("lng",lng);
             runInfoModal(info[lng].contact.title, info[lng].contact.msg);
-            console.log('title',info[lng].contact.title);
         })
 
         .catch(console.log);
