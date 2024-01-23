@@ -1,4 +1,4 @@
-const info = {
+info = {
     EN: {
         contact: {
         title: "Message sent!",
@@ -30,4 +30,6 @@ function runInfoModal(title, msg) {
     modalTitle.textContent=title;
     modalMessage.textContent=msg;
 
+    triggerInfoModal.click();
+    contactForm.reset();
 }
