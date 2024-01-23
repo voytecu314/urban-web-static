@@ -742,20 +742,20 @@
             </div>
     </footer>
 
-       <!-- Button trigger email confirmation modal -->
-    <button id="triggerConfirmationModal" type="button" style="display: none;" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#confirmationModal">
-        Launch confirmation modal
+       <!-- Button trigger email info modal -->
+    <button id="triggerInfoModal" type="button" style="display: none;" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal">
+        Launch info modal
     </button>
     
     <!-- Modal -->
-    <div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+            <h1 class="modal-title fs-5" id="infoModalTitle">Modal title</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
+            <div id="infoModalMessage" class="modal-body">
                 Check your email (email)
             </div>
             <div class="modal-footer">
@@ -925,6 +925,7 @@
         <script src="js/email-voucher.js"></script>
         <script src="js/contact-form.js"></script>
         <script src="js/checksModal.js"></script>
+        <script src="js/infoModal.js"></script>
         
     </body>
 </html>
