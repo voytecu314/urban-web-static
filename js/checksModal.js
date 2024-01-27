@@ -10,12 +10,14 @@
             document.getElementById('add-files-btn').addEventListener('click', (e) => {
                     const customerDescriptionBox = document.getElementById('customer-description-box');
                     const uuid = crypto.randomUUID().slice(0,3);
-                    const fileInput = 
-                        `<div class="d-flex">
-                            <input type="file" name="customer-file" id="customer-file-${uuid}" class="form-control" accept="audio/*,video/*,image/*">
-                            <button type="button" class="btn btn-secondary" onclick="this.parentElement.remove()"><i class="bi bi-trash"></i></button>
-                        </div>`;
-                    customerDescriptionBox.insertAdjacentHTML('afterend', fileInput);
+                    const div = document.createElement('div');
+                    div.classList.add('d-flex');
+                    div.classList.add('file-container');
+                    div.innerHTML = 
+                        `<input type="file" name="customer-file" id="customer-file-${uuid}" class="form-control" accept="audio/*,video/*,image/*">
+                        <button type="button" class="btn btn-secondary" onclick="this.parentElement.remove()"><i class="bi bi-trash"></i></button>`;
+                    div.firstElementChild.addEventListener('change',validateFileSize);
+                    customerDescriptionBox.insertAdjacentElement('afterend', div);
             });
 
             document.getElementById('select-palette').addEventListener('change',(e)=>{
@@ -38,3 +40,14 @@
                     return input.nextElementSibling;
                 },select.nextElementSibling);
             });
+
+            function validateFileSize(e) {
+                if(e.target.files[0].size > 4999999){
+                    const fileInputContainer = this.parentElement;
+                    fileInputContainer.classList.add('size-popup');
+                    setTimeout(()=>{fileInputContainer.classList.remove('size-popup')},2500)
+                    this.value = '';
+                } else {
+                    console.log('FILE OK');
+                } 
+            }
